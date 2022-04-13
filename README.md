@@ -48,6 +48,7 @@ Les paquets ne sont pas taggués 802.1q en entrée et en sortie des ports du swi
 
 ### PVID
 Port Vlan ID. C'est le VLAN auquel un port est associé. La notion de PVID permet donc de savoir dans quel VLAN se situe ce port. Un port ne peut avoir qu'un seul PVID.
+Par défaut, chaque port est associé au PVID 1, soit le VLAN 1
 
 ### VLAN natif
 La notion de VLAN natif entre en compte dans le cas d'association de VLAN par port. Cela correspond au PVID sur port trunk. Ainsi lorsqu'un trame non taggué arrive sur un port trunk, elle sera associé à un VLAN en fonction du PVID du port. On dit alors que la trame est associé au VLAN natif du port
@@ -85,3 +86,25 @@ Ce champ codé sur 1 bit assure la compatibilité entre les adresses MAC Etherne
 
 ## VLAN Id, VID
 Ce champ de 12 bits sert à identifier le virtual lan (VLAN) auquel appartient la trame. Il est possible de coder 4094 VLAN (de 1 à 4094) avec ce champ. La valeur "0" signifie qu'il n'y a pas de VLAN, et la valeur 4095 est réservée. Les valeurs 1002 à 1005 sont réservées pour des protocoles de niveau 2 différents d'Ethernet.
+
+# Types de Port
+
+## Port de type Access
+```
+Par défaut, le type de port est configuré en Access et sur le VLAN ayant pour identifiant le numéro 1.
+Un port de type Access doit être configuré lorsqu’un seul VLAN transite par ce port et qu’il envoie du
+trafic Untagged. On utilise ce type de configuration pour connecter un appareil qui n’est pas en mesure
+d’identifier les paquets Ethernets. Un ordinateur par exemple.
+```
+
+## Port de type Hybrid
+```
+Un port de type Hybrid, autorise le trafic Untagged et Tagged de plusieurs VLANs. On peut utiliser ce
+type de configuration lorsque l’on connecte un téléphone (Tagged sur l’ID du VLAN) en série avec un
+ordinateur (Untagged sur l’ID du VLAN).
+```
+## Port de type Trunk
+```
+Un port de type Trunk transporte le trafic en VLAN Tagged à l’exception du PVID qui sera Untagged.
+Ce type de port est utilisé pour interconnecter des switchs.
+```
