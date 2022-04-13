@@ -33,10 +33,10 @@ retiré le tag (identifiant) du VLAN.
 
 ### VLAN UNTAGGED
 ```
-Un port de switch configuré en “untagged” signifie que la notion de VLAN est totalement transparente pour
+Un port de switch configuré en untagged signifie que la notion de VLAN est totalement transparente pour
 l'équipement branché derrière. C'est-à-dire qu'il ignore son VLAN de rattachement. C'est le switch qui
 utilise l'id VLAN associé pour son traitement interne pour la distribution des paquets sur ses ports.
-Les paquets ne sont pas taggués 802.1q en entrée et en sortie des ports du switch configurés en “untagged”.
+Les paquets ne sont pas taggués 802.1q en entrée et en sortie des ports du switch configurés en untagged
 ```
 ![VLAN-UNTAG](https://user-images.githubusercontent.com/83721477/163259255-0c950335-c1be-402e-81b2-0b53b510f231.jpg)
 1. L'hôte A envoie le trafic au commutateur. Le trafic n'a pas de balise VLAN
