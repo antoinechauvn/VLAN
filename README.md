@@ -60,8 +60,8 @@ Les paquets ne sont pas taggués 802.1q en entrée et en sortie des ports du swi
 
 ## Tag protocol identifier, TPID
 ```
-Les 16 premiers bits sont utilisés pour identifier le protocole de la balise insérée. Dans le cas de la balise 802.1Q la valeur
-de ce champ est fixée à 0x8100.
+Les 16 premiers bits sont utilisés pour identifier le protocole de la balise insérée. Dans le cas de la
+balise 802.1Q la valeur de ce champ est fixée à 0x8100.
 ```
 
 ## Contenu du champ TCI (Tag control information)
