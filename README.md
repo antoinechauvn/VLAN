@@ -4,7 +4,8 @@ Notion de Réseau local Virtuel (Norme IEEE 802.1Q)
 ### Qu'est ce qu'un Vlan?
 
 ```
-Un VLAN est ni plus ni moins qu’un réseau virtuel, orchestré par un commutateur réseau tel qu’un Switch de niveau 2 (N2 ou N3). 
+Un VLAN est ni plus ni moins qu’un réseau virtuel, orchestré par un commutateur réseau tel qu’un Switch de niveau 2
+(N2 ou N3). 
 ```
 
 #### Avantages:
