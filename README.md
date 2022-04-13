@@ -18,8 +18,9 @@ de niveau 2(N2 ou N3).
 
 ### VLAN TAGGED
 ```
-Un port de switch configuré en “tagged” signifie que l'équipement branché derrière est capable de traiter les tags 802.1q et qu'il
-est configuré pour les traiter. Le port du switch envoie le trafic sans avoir retiré le tag (identifiant) du VLAN.
+Un port de switch configuré en “tagged” signifie que l'équipement branché derrière est capable de traiter les
+tags 802.1q et qu'il est configuré pour les traiter. Le port du switch envoie le trafic sans avoir retiré le
+tag (identifiant) du VLAN.
 ```
 ![VLAN-TAG](https://user-images.githubusercontent.com/83721477/163259378-64dc352d-6dec-45d4-b7fe-56f502a2c605.jpg)
 
