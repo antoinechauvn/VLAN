@@ -1,14 +1,14 @@
 # VLAN
 Notion de Réseau local Virtuel (Norme IEEE 802.1Q)
 
-### Qu'est ce qu'un Vlan?
+### Qu'est-ce qu'un VLAN?
 
 ```
 Un VLAN est ni plus ni moins qu’un réseau virtuel, orchestré par un commutateur réseau tel qu’un Switch
 de niveau 2(N2 ou N3). 
 ```
 
-#### Avantages:
+#### Avantages
 
 ```
 -Segmentation logique du réseau afin de garantir des performances optimales.
@@ -43,6 +43,15 @@ Les paquets ne sont pas taggués 802.1q en entrée et en sortie des ports du swi
 2. La trame est reçue sur le port 1 du commutateur. Il s'agit d'un port non balisé, configuré avec l'ID VLAN 10. Le commutateur insère ensuite la balise VLAN dans la trame
 3. Le commutateur détermine que la trame doit être transférée hors du port 2. Il s'agit également d'un port non balisé, donc la balise VLAN est retirée de la trame
 4. L'hôte B reçoit la trame non étiquetée normalement
+
+<hr>
+
+### PVID
+Port Vlan ID. C'est le VLAN auquel un port est associé. La notion de PVID permet donc de savoir dans quel VLAN se situe ce port. Un port ne peut avoir qu'un seul PVID.
+
+### VLAN natif
+La notion de VLAN natif entre en compte dans le cas d'association de VLAN par port. Cela correspond au PVID sur port trunk. Ainsi lorsqu'un trame non taggué arrive sur un port trunk, elle sera associé à un VLAN en fonction du PVID du port. On dit alors que la trame est associé au VLAN natif du port
+<hr>
 
 ## Trame ethernet
 | adresse MAC dst | adresse MAC source | Taille de la trame/EtherType	| Data | FCS |
