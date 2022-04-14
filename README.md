@@ -38,7 +38,8 @@ l'équipement branché derrière. C'est-à-dire qu'il ignore son VLAN de rattach
 utilise l'id VLAN associé pour son traitement interne pour la distribution des paquets sur ses ports.
 Les paquets ne sont pas taggués 802.1q en entrée et en sortie des ports du switch configurés en untagged
 ```
-![VLAN-UNTAG](https://user-images.githubusercontent.com/83721477/163259255-0c950335-c1be-402e-81b2-0b53b510f231.jpg)
+![untag](https://user-images.githubusercontent.com/83721477/163422606-2fe6ea4d-f05b-4e7e-9931-8d8518eee910.png)
+
 1. L'hôte A envoie le trafic au commutateur. Le trafic n'a pas de Tag VLAN
 2. La trame est reçue sur le port 1 du commutateur. Il s'agit d'un port untagged, configuré avec l'ID VLAN 10. Le commutateur insère ensuite le Tag dans la trame
 3. Le commutateur détermine que la trame doit être transférée hors du port 2. Il s'agit également d'un port untagged, donc le Tag est retirée de la trame
