@@ -108,3 +108,19 @@ ordinateur (Untagged sur l’ID du VLAN).
 Un port de type Trunk transporte le trafic en VLAN Tagged à l’exception du PVID qui sera Untagged.
 Ce type de port est utilisé pour interconnecter des switchs.
 ```
+
+## Qu'est-ce qu'une SVI?
+```
+Une interface SVI est une interface virtuelle configurée dans un commutateur multicouche, comme
+illustré dans la figure. Une interface SVI peut être créée pour chaque VLAN existant sur le 
+commutateur. Une interface SVI est considérée comme virtuelle, car aucun port physique n'est dédié
+à l'interface. Elle peut assurer les mêmes fonctions pour le VLAN qu'une interface de routeur et peut
+être configurée à peu près de la même manière (adresse IP, listes de contrôle d'accès d'entrée et de
+sortie, etc.). L'interface SVI du VLAN assure le traitement de couche 3 des paquets vers ou depuis tous
+les ports de commutateur associés à ce VLAN.
+```
+
+## Créer une SVI:
+```cisco
+interface vlan <number>
+```
