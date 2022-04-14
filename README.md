@@ -22,7 +22,7 @@ Un port de switch configuré en “tagged” signifie que l'équipement branché
 traiter les tags 802.1q et qu'il est configuré pour les traiter. Le port du switch envoie le trafic
 sans avoir retiré le tag (identifiant) du VLAN.
 ```
-![tag](https://user-images.githubusercontent.com/83721477/163423807-3fdbc1a4-2abb-460d-ad68-6af03d4fd309.png)
+![tag](https://user-images.githubusercontent.com/83721477/163424424-0c3e32ae-123c-4924-9cf0-2dd50ea0782e.png)
 
 1. Un hôte enverra une trame sans balise
 2. La trame entre dans un port non balisé sur le commutateur 1, configuré avec le VLAN 10 dans ce cas. Le commutateur ajoute la balise VLAN à la trame
@@ -38,7 +38,7 @@ l'équipement branché derrière. C'est-à-dire qu'il ignore son VLAN de rattach
 utilise l'id VLAN associé pour son traitement interne pour la distribution des paquets sur ses ports.
 Les paquets ne sont pas taggués 802.1q en entrée et en sortie des ports du switch configurés en untagged
 ```
-![untag](https://user-images.githubusercontent.com/83721477/163422924-045ea0ce-7393-4172-a570-242c295b0c78.png)
+![untag](https://user-images.githubusercontent.com/83721477/163424492-4481089d-c438-4632-b92e-6d4b55762bc3.png)
 
 1. L'hôte A envoie le trafic au commutateur. Le trafic n'a pas de Tag VLAN
 2. La trame est reçue sur le port 1 du commutateur. Il s'agit d'un port untagged, configuré avec l'ID VLAN 10. Le commutateur insère ensuite le Tag dans la trame
