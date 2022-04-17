@@ -53,7 +53,7 @@ Port Vlan ID. C'est le VLAN auquel un port est associé. La notion de PVID perme
 Par défaut, chaque port est associé au PVID 1, soit le VLAN 1
 
 ### VLAN natif
-La notion de VLAN natif entre en compte dans le cas d'association de VLAN par port. Cela correspond au PVID sur port trunk. Ainsi lorsqu'un trame non taggué arrive sur un port trunk, elle sera associé à un VLAN en fonction du PVID du port. On dit alors que la trame est associé au VLAN natif du port
+La notion de VLAN natif entre en compte dans le cas d'association de VLAN par port. Cela correspond au PVID sur port trunk. Ainsi lorsqu'une trame non taggué arrive sur un port trunk, elle sera associé à un VLAN en fonction du PVID du port. On dit alors que la trame est associé au VLAN natif du port
 <hr>
 
 ## Trame ethernet
