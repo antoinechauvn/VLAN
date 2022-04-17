@@ -25,12 +25,12 @@ sans avoir retiré le tag (identifiant) du VLAN.
 ![tag](https://user-images.githubusercontent.com/83721477/163605373-6f6bfccf-8390-455f-a4dd-eca7504d4e04.png)
 
 
-1. Un hôte enverra une trame sans balise
-2. La trame entre dans un port non balisé sur le commutateur 1, configuré avec le VLAN 10 dans ce cas. Le commutateur ajoute la balise VLAN à la trame
-3. Le commutateur 1 détermine que le port 2 doit envoyer cette trame au commutateur 2. Il s'agit d'un port étiqueté, il vérifie donc que le VLAN 10 est autorisé sur ce port. Si c'est le cas, il laisse la balise intacte et envoie la trame. Si le VLAN 10 n'est pas autorisé, il abandonne la trame
+1. Un hôte enverra une trame sans tag
+2. La trame entre dans un port non taggué sur le commutateur 1, configuré avec le VLAN 10 dans ce cas. Le commutateur ajoute la balise VLAN à la trame
+3. Le commutateur 1 détermine que le port 2 doit envoyer cette trame au commutateur 2. Il s'agit d'un port "TAGGED", il vérifie donc que le VLAN 10 est autorisé sur ce port. Si c'est le cas, il laisse le tag intacte et envoie la trame. Si le VLAN 10 n'est pas autorisé, il abandonne la trame
 4. Le commutateur 2 reçoit la trame sur le port étiqueté 1. Ce commutateur détermine également si le VLAN 10 est autorisé sur ce port et le supprime si ce n'est pas le cas. Le commutateur 2 détermine que le port 2 doit envoyer la trame
-5. Étant donné que le port 2 est un port non étiqueté, il supprime l'étiquette de la trame, puis l'envoie
-6. L'hôte B reçoit la trame non étiquetée
+5. Étant donné que le port 2 est un port UNTAGGED, il supprime le tag de la trame, puis l'envoie
+6. L'hôte B reçoit la trame sans tag
 
 ### VLAN UNTAGGED
 ```
